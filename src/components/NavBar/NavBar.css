@@ -1,0 +1,10 @@
+.navegador{
+    text-align: center;
+    color: white;
+}
+
+.navegador a{
+    background-color: rgb(0, 0, 0);
+    border-radius: 1em;
+    padding: 2% 3% 1% 3%;
+}

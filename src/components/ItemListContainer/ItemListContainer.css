@@ -1,0 +1,13 @@
+.containerTotal{
+    background-color: rgba(105, 104, 104, 0.411);
+}
+
+.tituloContainer{
+    text-align: center;
+    color: green;
+}
+
+.subTituloContainer{
+    text-align: center;
+    font-size: 24px;
+}

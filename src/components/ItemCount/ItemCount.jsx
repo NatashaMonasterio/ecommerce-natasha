@@ -1,8 +1,9 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import KenLAdulto from '../../KenLAdulto.PNG';
 
-function ItemCount ({stock}){
-    const [count, setCount] = useState(1)
+function ItemCount ({stock, initial}){
+    const [count, setCount] = useState(initial)
     
     function agregar() {
         if (count<stock){
@@ -16,6 +17,10 @@ function ItemCount ({stock}){
         }
     }
 
+    function comprar(){
+        console.log("Haz comprado un total de: ", count, " productos")
+    }
+
     return(
         <section className="card-body">
             <h3>Balanceado</h3>
@@ -25,6 +30,7 @@ function ItemCount ({stock}){
                 <p className="mx-4">{count}</p>
                 <button onClick={agregar} className="btn-primary">+</button>
             </div>
+            <button onClick={comprar} className="mx-4 btn-dark"> Comprar </button>
         </section>
     )
 }

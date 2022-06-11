@@ -10,7 +10,7 @@ function App() {
       < NavBar/>
       {/* < Cuerpo/> */}
       < ItemListContainer titulo="PETHOUSE" subTitulo="Bienvenidos a la veterinaria de mejor calidad" />
-      < ItemCount stock="5"/>
+      < ItemCount stock={5} initial={1}/>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
 
 const ItemListContainer = ({titulo, subTitulo})=>{
@@ -7,6 +8,7 @@ const ItemListContainer = ({titulo, subTitulo})=>{
                 <h1 className="tituloContainer">{titulo}</h1>
                 <p className="subTituloContainer">{subTitulo}</p>
             </section>
+            <ItemList/>
         </>
         
     );

@@ -1,4 +1,4 @@
-import carrito from '../../carrito.png';
+import carrito from '../imagenes/carrito.png';
 
 function CartWidget(){
     return(

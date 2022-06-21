@@ -58,3 +58,17 @@ export const getFetch = () => {
         }, 2000)
     })
 }
+
+
+// Consulta detalle de un solo producto
+
+let productoUnico = {id: 1, nombre: "Alimento Ken L Adulto", descripcion: "22 + 3 kg", precio: 6700, imagen: KenLAdulto}
+
+
+export const getFetchOne = () => {
+    return new Promise ((resolve) =>{
+        setTimeout(()=>{
+            resolve(productoUnico)
+        }, 2000)
+    })
+}

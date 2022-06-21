@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { getFetch, Item } from "../Item/Item";
+import { getFetch } from "../../helpers/getFetch";
+import { Item } from "../Item/Item";
 
 const ItemList = () => {
     const [productos, setProductos] = useState([])
@@ -20,7 +21,9 @@ const ItemList = () => {
             { loading ?
                 <h3 className="text-center my-5">Cargando productos... Aguarde</h3>
             :
-                <Item/>
+                <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
+                    <Item productos={productos}/> 
+                </div>
             }
         </div>
     )

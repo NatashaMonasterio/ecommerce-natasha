@@ -11,6 +11,7 @@ let productos = [
         nombre: "Alimento Ken L Adulto",
         descripcion: "22 + 3 kg",
         precio: 6700,
+        categoria: "perro",
         imagen: KenLAdulto
     },
     {
@@ -18,6 +19,7 @@ let productos = [
         nombre: "Alimento Ken L Cachorro",
         descripcion: "15 + 3 kg",
         precio: 5200,
+        categoria: "perro",
         imagen: KenLCachorro
       },
     {
@@ -25,6 +27,7 @@ let productos = [
         nombre: "Alimento Nutrique Adulto",
         descripcion: "Raza Mediana",
         precio: 410,
+        categoria: "gato",
         imagen: NutriqueAdulto
     },
     {
@@ -32,6 +35,7 @@ let productos = [
         nombre: "Alimento Pro Plan Adulto",
         descripcion: "Raza Pequeña",
         precio: 2800,
+        categoria: "gato",
         imagen: ProPlanAdulto
     },
     {
@@ -39,6 +43,7 @@ let productos = [
         nombre: "Alimento Royal Canin",
         descripcion: "Mini Adulto",
         precio: 1224,
+        categoria: "perro",
         imagen: RoyalMiniAdulto
     },
     {
@@ -46,6 +51,7 @@ let productos = [
         nombre: "Alimento Top Nutrition Adulto",
         descripcion: "Raza Grande",
         precio: 6520,
+        categoria: "gato",
         imagen: TopNutritionAdulto
     }
 ]
@@ -55,20 +61,6 @@ export const getFetch = () => {
     return new Promise ((resolve) =>{
         setTimeout(()=>{
             resolve(productos)
-        }, 2000)
-    })
-}
-
-
-// Consulta detalle de un solo producto
-
-let productoUnico = {id: 1, nombre: "Alimento Ken L Adulto", descripcion: "22 + 3 kg", precio: 6700, imagen: KenLAdulto}
-
-
-export const getFetchOne = () => {
-    return new Promise ((resolve) =>{
-        setTimeout(()=>{
-            resolve(productoUnico)
         }, 2000)
     })
 }

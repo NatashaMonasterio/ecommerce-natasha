@@ -25,9 +25,7 @@ const ItemListContainer = ({titulo, subTitulo})=>{
         }
         
     }, [categoriaId])
-
-    console.log(productos)
-
+    
     return(
         <>
             <section className='containerTotal'>

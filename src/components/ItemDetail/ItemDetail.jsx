@@ -30,7 +30,7 @@ const ItemDetail = ({productoUnico}) => {
                 :
                   <div>
                     <div>
-                      <Link to="/">
+                      <Link to="/cart">
                         <button className="btn btn-dark my-3">Finalizar Compra</button>
                       </Link>
                     </div>

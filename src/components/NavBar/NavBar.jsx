@@ -24,7 +24,9 @@ function NavBar() {
               <Nav.Link href="#link">CONTACTO</Nav.Link>
             </Nav>
           </Navbar.Collapse>
-          < CartWidget />
+          <Link to="/cart">
+            < CartWidget />
+          </Link>
         </Container>
       </Navbar> 
     ); 

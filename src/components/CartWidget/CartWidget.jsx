@@ -2,7 +2,7 @@ import carrito from '../../imagenes/carrito.png';
 
 function CartWidget(){
     return(
-        <img src={carrito} alt='CarritoCompra' width={80} />
+        <button className='border-primary'><img src={carrito} alt='CarritoCompra' width={80} /></button>
     )
 }
 

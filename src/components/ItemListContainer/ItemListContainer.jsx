@@ -23,9 +23,8 @@ const ItemListContainer = ({titulo, subTitulo})=>{
             .catch((err)=>console.log(err))
             .finally(()=>setLoading(false))
         }
-        
     }, [categoriaId])
-    
+
     return(
         <>
             <section className='containerTotal'>

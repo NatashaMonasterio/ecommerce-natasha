@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../Contexts/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({productoUnico}) => {
-  
+  const { addToCart } = useCartContext()
   const [boton, setButton] = useState("button")
+
   const onAdd = (cant) => {
     console.log("Haz comprado un total de: ", cant, " productos")
     setButton ("botonOpcional")
+    addToCart({...productoUnico, cantidad: cant})
   }
 
   return (

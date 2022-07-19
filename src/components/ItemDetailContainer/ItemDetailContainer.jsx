@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getFetch} from "../../helpers/getFetch";
+import { getFirestore, doc, getDoc} from '@firebase/firestore';
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
@@ -11,10 +10,13 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
 
     useEffect(()=>{
-        getFetch()
-        .then((resp)=> setProdUnico(resp.find((prod) => prod.id == (id))))
+        const db = getFirestore()
+        const queryItem = doc(db, 'productos', id)
+
+        getDoc(queryItem)
+        .then((resp)=> setProdUnico({id: resp.id, ...resp.data()}))
         .catch((err)=>console.log(err))
-        .finally(()=>setLoading(false))
+        .finally(()=>setLoading(false)) 
     }, [id])
   
     return (

@@ -18,7 +18,7 @@ const ItemDetail = ({productoUnico}) => {
       <h2 className="text-white bg-dark text-center">DETALLE DE PRODUCTO SELECCIONADO</h2>
       <div className="row my-3 text-center">
               <div className="col-4">
-                  {<img src={productoUnico.imagen} alt="Alimento balanceado" width={170}/>}
+                  {<img src={productoUnico.imagen} alt={productoUnico.nombre} width={170}/>}
               </div>
               <div className="col-4">
                   <h3 className="mb-4 border border-dark">{productoUnico.nombre}</h3> 

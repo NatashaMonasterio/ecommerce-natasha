@@ -32,17 +32,6 @@ export const CartContextProvider = ({children}) => {
     const precioTotal = () => {
         return cart.reduce((acum, valor) => (acum +(valor.cantidad * valor.precio)), 0)
     }   
-
-    /* const carritoVacio = () => {
-        return(
-            <>
-                <h1>No hay productos seleccionados para realizar la compra</h1>
-                <Link to="/" >
-                    <button>Ver productos para comprar</button>
-                </Link>
-            </> 
-        )
-    } */
  
     const itemCartWidget = () => {
         return cart.reduce((acum, prod) => acum = (acum + prod.cantidad),0)
@@ -56,7 +45,6 @@ export const CartContextProvider = ({children}) => {
                 vaciarCarrito,
                 eliminarItem,
                 precioTotal,
-                /* carritoVacio, */
                 itemCartWidget
             }}
         >

@@ -8,7 +8,7 @@ export const Item = ({prod})=>{
                     {prod.nombre}
                 </div>
                 <div className="card-body">
-                    {<img src={prod.imagen} alt="Alimento balanceado" width={170}/>}
+                    {<img src={prod.imagen} alt={prod.nombre} width={170}/>}
                 </div>
                 <div className="card-footer">
                     <Link to={`/detalle/${prod.id}`}>

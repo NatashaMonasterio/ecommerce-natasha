@@ -4,6 +4,11 @@ import NutriqueAdulto from '../imagenes/NutriqueAdulto.PNG'
 import ProPlanAdulto from '../imagenes/ProPlanAdulto.PNG' 
 import RoyalMiniAdulto from '../imagenes/RoyalMiniAdulto.PNG'
 import TopNutritionAdulto from '../imagenes/TopNutritionAdulto.PNG'
+import ExcellentAdult from '../imagenes/ExcellentAdult.PNG'
+import PurinaCatChow from '../imagenes/PurinaCatChow.PNG'
+import PurinaGati from '../imagenes/PurinaGati.PNG'
+import KongoGatos from '../imagenes/KongoGatos.PNG'
+import RoyalInstinctive from '../imagenes/RoyalInstinctive.PNG'
 
 let productos = [
     {
@@ -27,7 +32,7 @@ let productos = [
         nombre: "Alimento Nutrique Adulto",
         descripcion: "Raza Mediana",
         precio: 410,
-        categoria: "gato",
+        categoria: "perro",
         imagen: NutriqueAdulto
     },
     {
@@ -35,7 +40,7 @@ let productos = [
         nombre: "Alimento Pro Plan Adulto",
         descripcion: "Raza Pequeña",
         precio: 2800,
-        categoria: "gato",
+        categoria: "perro",
         imagen: ProPlanAdulto
     },
     {
@@ -51,8 +56,48 @@ let productos = [
         nombre: "Alimento Top Nutrition Adulto",
         descripcion: "Raza Grande",
         precio: 6520,
-        categoria: "gato",
+        categoria: "perro",
         imagen: TopNutritionAdulto
+    },
+    {
+        id: 7,
+        nombre: "Excellent Adult",
+        descripcion: "Adulto - 3kg",
+        precio: 2840,
+        categoria: "gato",
+        imagen: ExcellentAdult
+    },
+    {
+        id: 8,
+        nombre: "Purina Cat Chow",
+        descripcion: "Multiproteina - Adulto - 8kg",
+        precio: 4269,
+        categoria: "gato",
+        imagen: PurinaCatChow
+    },
+    {
+        id: 9,
+        nombre: "Purina Gati",
+        descripcion: "Pescado con vegetales - Adulto - 15kg",
+        precio: 4443,
+        categoria: "gato",
+        imagen: PurinaGati
+    },
+    {
+        id: 10,
+        nombre: "Kongo Gatos",
+        descripcion: "Salmon y atún - Adulto - 8kg",
+        precio: 2678,
+        categoria: "gato",
+        imagen: KongoGatos
+    },
+    {
+        id: 11,
+        nombre: "Royal Canin Gato Instinctive",
+        descripcion: "85gr",
+        precio: 303,
+        categoria: "gato",
+        imagen: RoyalInstinctive
     }
 ]
 

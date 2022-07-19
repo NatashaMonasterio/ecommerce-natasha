@@ -2,8 +2,10 @@ import {Navbar, Container, Nav, NavDropdown} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logoPetHouse from '../../logoPetHouse.svg';
 import CartWidget from '../CartWidget/CartWidget';
+import { useCartContext } from '../Contexts/CartContext';
 
 function NavBar() {
+  const {itemCartWidget} = useCartContext()
     return (
         <Navbar bg="light" expand="lg">
         <Container>
@@ -25,7 +27,10 @@ function NavBar() {
             </Nav>
           </Navbar.Collapse>
           <Link to="/cart">
-            < CartWidget />
+            <div>
+              {<CartWidget />}
+              <div className="bg-danger text-dark text-center ">{ itemCartWidget() !== 0 && itemCartWidget()}</div>
+            </div>
           </Link>
         </Container>
       </Navbar> 

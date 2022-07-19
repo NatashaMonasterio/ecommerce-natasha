@@ -1,4 +1,5 @@
 import {createContext, useState, useContext} from "react";
+import { Link } from "react-router-dom";
 
 export const CartContext = createContext([])
 export const useCartContext = () => useContext(CartContext)
@@ -22,8 +23,29 @@ export const CartContextProvider = ({children}) => {
         }
     }
 
-    const vaciarCarrito = () =>{
-        setCart([])
+    const vaciarCarrito = () => { setCart([]) }
+
+    const eliminarItem = (id) => {
+        setCart(cart.filter((item) => item.id !== id))
+    }; 
+
+    const precioTotal = () => {
+        return cart.reduce((acum, valor) => (acum +(valor.cantidad * valor.precio)), 0)
+    }   
+
+    /* const carritoVacio = () => {
+        return(
+            <>
+                <h1>No hay productos seleccionados para realizar la compra</h1>
+                <Link to="/" >
+                    <button>Ver productos para comprar</button>
+                </Link>
+            </> 
+        )
+    } */
+ 
+    const itemCartWidget = () => {
+        return cart.reduce((acum, prod) => acum = (acum + prod.cantidad),0)
     }
 
     return(
@@ -31,7 +53,11 @@ export const CartContextProvider = ({children}) => {
             value={{
                 cart,
                 addToCart,
-                vaciarCarrito
+                vaciarCarrito,
+                eliminarItem,
+                precioTotal,
+                /* carritoVacio, */
+                itemCartWidget
             }}
         >
             {children}

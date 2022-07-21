@@ -1,3 +1,24 @@
+# PETHOUSE - VETERINARIA
+Este proyecto tiene la intencion de brindar el servicio de compra de alimentos para perros y gatos. La venta proviene de una veterinaria llamada "PetHouse". 
+Mas adelante se programará la página con secciones infomativas como "veterinarios", "mascotas", "contacto" que hoy en dia aun no tienen contenido ya que no es relevante para un proyecto realizado con React. 
+
+# DEMO: 
+https://lucky-bavarois-d32dcb.netlify.app/
+En este link se podrá apreciar la página web mediante "netlify". 
+
+
+# DEPENDENCIAS UTILIZADAS:
+"bootstrap": "^5.1.3", 
+"firebase": "^9.9.0",
+"react": "^18.1.0",
+"react-bootstrap": "^2.4.0",  
+"react-dom": "^18.1.0",
+"react-router-dom": "^6.3.0",
+"react-scripts": "5.0.1",
+"sweetalert": "^2.1.2",   
+"web-vitals": "^2.1.4"
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

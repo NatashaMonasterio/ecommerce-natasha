@@ -1,5 +1,5 @@
 import {createContext, useState, useContext} from "react";
-import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 export const CartContext = createContext([])
 export const useCartContext = () => useContext(CartContext)
@@ -19,7 +19,13 @@ export const CartContextProvider = ({children}) => {
                 ...cart, 
                 item
             ])
-            alert("Se agrego el producto correctamente")
+            swal({
+                title: '¡Haz agregado un producto a tu carrito',
+                icon: 'success',
+                width: '300px',
+                timer: 3000,
+                allowEscapeKey: true
+            }) 
         }
     }
 
@@ -41,6 +47,7 @@ export const CartContextProvider = ({children}) => {
         <CartContext.Provider 
             value={{
                 cart,
+                setCart,
                 addToCart,
                 vaciarCarrito,
                 eliminarItem,

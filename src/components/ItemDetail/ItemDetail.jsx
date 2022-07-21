@@ -50,4 +50,4 @@ const ItemDetail = ({productoUnico}) => {
   )
 }
 
-export default ItemDetail;
+export default ItemDetail;  

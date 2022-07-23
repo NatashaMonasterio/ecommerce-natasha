@@ -8,7 +8,6 @@ const ItemDetail = ({productoUnico}) => {
   const [boton, setButton] = useState("button")
 
   const onAdd = (cant) => {
-    console.log("Haz comprado un total de: ", cant, " productos")
     setButton ("botonOpcional")
     addToCart({...productoUnico, cantidad: cant})
   }

@@ -23,7 +23,7 @@ export const CartContextProvider = ({children}) => {
                 title: '¡Haz agregado un producto a tu carrito',
                 icon: 'success',
                 width: '300px',
-                timer: 3000,
+                timer: 2000,
                 allowEscapeKey: true
             }) 
         }

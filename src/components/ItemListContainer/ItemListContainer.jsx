@@ -13,7 +13,7 @@ const ItemListContainer = ({titulo, subTitulo})=>{
 
     useEffect(()=>{
         const db = getFirestore()
-        const queryCollection = collection (db, 'orders')
+        const queryCollection = collection (db, 'productos')
         const queryCollectionFilter = categoriaId ? query (queryCollection, where('categoria','==', categoriaId)) : queryCollection
          
         getDocs(queryCollectionFilter)
